@@ -1,0 +1,153 @@
+$backColor: #eaeaea;
+$redColor: #ff3e79;
+$greenColor: #41f6d7;
+
+.services {
+  margin-left: 15px;
+  overflow: hidden;
+
+  &-slide__el {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    background-color: white;
+
+    &-title {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7e7e82;
+      margin-bottom: 0px;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 18px;
+      color: #1b1c21;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+
+    &-btn {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      width: 119px;
+      height: 32px;
+      background-color: $redColor;
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      border: none;
+      border-radius: 16px;
+
+      &-text {
+        font-size: 12px;
+        line-height: 24px;
+        align-items: center;
+      }
+    }
+  }
+  &-pagination--margin {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services--margin {
+    height: 200px;
+  }
+
+  .services-titles {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .services > .swiper-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .services {
+    height: auto;
+    margin-left: 0px;
+    &--margin {
+      height: auto;
+    }
+    &-slide__el {
+      display: flex;
+      position: relative;
+      width: 93%;
+      height: 80px;
+      margin-left: auto;
+      margin-right: auto;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        bottom: 0px;
+        left: 35px;
+        right: 35px;
+        background-color: $backColor;
+      }
+
+      &-title {
+        display: none;
+      }
+
+      &-text {
+        position: absolute;
+        top: 35%;
+        &--price {
+          left: 50%;
+        }
+        &--line {
+          left: 62%;
+        }
+      }
+
+      &-btn {
+        position: static;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10px;
+        margin-left: auto;
+      }
+    }
+  }
+  .services-titles {
+    display: flex;
+    position: relative;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    width: 93%;
+    height: 50px;
+    &__repair,
+    &__price,
+    &__line {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.72;
+    }
+    &__repair {
+      position: absolute;
+      margin-left: 10px;
+    }
+    &__price {
+      position: absolute;
+      margin-left: 51%;
+    }
+    &__line {
+      position: absolute;
+      margin-left: 63%;
+    }
+  }
+}

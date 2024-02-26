@@ -1,0 +1,126 @@
+h2 {
+  font-weight: 100;
+  color: #7e7e82;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-image: linear-gradient(to right, white, #f8f8f8);
+}
+
+.list-title {
+  font-family: 'TT Lakes';
+  margin-top: 0;
+  background-image: linear-gradient(to right, white, #f8f8f8);
+}
+
+.list {
+  overflow: hidden;
+  margin-left: 10px;
+
+  &-slide__el {
+    position: relative;
+    justify-content: start;
+    width: 220px;
+    height: 72px;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  &-slide__el:hover {
+    transform: scale(0.9);
+    transition-duration: 0.7s;
+  }
+  &-pagination {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .list {
+    margin-left: 20px;
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 1119px) {
+  .list-slide__el {
+    flex-basis: 29%;
+    min-width: 220px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    &-show:nth-child(n + 7) {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .list-slide__el {
+    min-width: 240px;
+    margin-right: 30px;
+    margin-bottom: 25px;
+
+    &-show:nth-child(n + 9) {
+      display: none;
+    }
+  }
+}
+
+.list-btn__el-img--rotate {
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+.list-btn {
+  cursor: pointer;
+  padding-bottom: 20px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+  &__el {
+    margin-left: 15px;
+    border: none;
+    background-color: transparent;
+
+    &-img {
+      padding-right: 10px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.list-slide__icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.list-slide__acer {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.list-slide__apple {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.list-slide__samsung {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+}

@@ -1,0 +1,187 @@
+@import './swiper-bundle.min.scss';
+@import './style_headerPC.scss';
+@import './navigation.scss';
+@import './content.scss';
+@import './swiper-bar.scss';
+@import './swiper-repair.scss';
+@import './services.scss';
+@import './footer.scss';
+@import './sidebar.scss';
+@import './feedback.scss';
+@import './asideCall.scss';
+
+@font-face {
+  font-family: 'TTLakesBold';
+  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTLakesMedium';
+  src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$bgColor: #f8f8f8;
+$backColor: #eaeaea;
+
+.opacity--background {
+  opacity: 0.05;
+}
+
+body {
+  font-family: 'TT Lakes';
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1440px) {
+  body {
+    position: relative;
+    z-index: 1;
+    padding-left: 320px;
+  }
+}
+
+main {
+  background-color: $bgColor;
+  font-family: 'TT Lakes';
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  margin: 0;
+  padding-top: 17px;
+  padding-right: 14px;
+  padding-bottom: 17px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  box-sizing: border-box;
+
+  .header__contacts {
+    margin-left: auto;
+    margin-right: 20px;
+
+    .header__contacts-btn-call,
+    .header__contacts-btn-chat,
+    .header__contacts-btn-profile {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 767px) {
+      .header__contacts,
+      .header__contacts-btn-call,
+      .header__contacts-btn-chat,
+      .header__contacts-btn-profile,
+      .head_divider--one {
+        display: none;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (min-width: 767px) {
+    .header__logo {
+      margin-left: 34px;
+    }
+  }
+
+  .header__info {
+    position: relative;
+
+    .header__info-btn {
+      margin-right: 17px;
+    }
+
+    @media (min-width: 767px) {
+      .header__info-btn--divider::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        border-radius: 2px;
+        background-color: $backColor;
+        height: 32px;
+        margin-left: 18px;
+        top: 25%;
+      }
+
+      .header__info-logo {
+        margin-left: 16px;
+        position: relative;
+      }
+    }
+  }
+
+  .header__status-contacts-btn,
+  .header__info-btn,
+  .header__contacts-btn {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    opacity: 1;
+
+    .header__status-contacts-btn-repair {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .header__status-contacts-btn:hover,
+  .header__info-btn:hover,
+  .header__contacts-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition-duration: 0.5s;
+  }
+
+  @media (min-width: 767px) {
+    .header__status--divider::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      border-radius: 2px;
+      background-color: $backColor;
+      height: 32px;
+      margin-left: -10px;
+      top: 30%;
+    }
+  }
+
+  .header__status--divider::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-radius: 2px;
+    background-color: $backColor;
+    height: 32px;
+    margin-left: -10px;
+    top: 30%;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+}

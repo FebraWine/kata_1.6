@@ -1,0 +1,51 @@
+footer {
+  margin: 0;
+}
+
+.info {
+  font-size: 14px;
+  line-height: 20px;
+  color: #1b1c21;
+  margin-left: 15px;
+  margin-right: 20px;
+  max-width: 600px;
+
+  &-href {
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 40px;
+    &__item {
+      text-decoration: none;
+      color: #1b1c21;
+      font-family: 'TTLakesMedium';
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  background-color: #f8f8f8;
+  &__item {
+    margin-right: 20px;
+    text-align: right;
+    width: 270px;
+  }
+
+  @media (max-width: 767px) {
+    &__item {
+      text-align: center;
+    }
+  }
+}
