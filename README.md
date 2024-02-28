@@ -1,1 +1,1 @@
-gh-pages: https://github.com/FebraWine/kata_1.6
+gh-pages: https://febrawine.github.io/kata_1.6/
